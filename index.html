@@ -45,9 +45,16 @@ a{text-decoration:none}
 .badges{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
 .badge{background:#fff;border:1px solid #dbe4f0;padding:9px 13px;border-radius:20px;font-weight:700}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.hero-photo{min-height:390px;border-radius:20px;background:
+.hero-photo{min-height:390px;position:relative;overflow:hidden;border-radius:20px;background:
 linear-gradient(#0002,#0002),
 url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:0 10px 30px #12304d33}
+.side-showcase{position:absolute;right:12px;top:12px;bottom:12px;width:145px;display:flex;flex-direction:column;gap:10px;justify-content:center}
+.side-showcase div{flex:1;min-height:95px;border-radius:12px;background:rgba(255,255,255,.94);display:flex;align-items:flex-end;justify-content:center;padding:10px;text-align:center;color:#111;box-shadow:0 3px 12px #0003;font-size:12px}
+.reference-layout .hero-copy{padding-right:20px}
+.trust-strip{background:linear-gradient(90deg,#082e78,#063b98);color:#fff;display:grid;grid-template-columns:repeat(5,1fr);gap:0;padding:18px 4%;text-align:center}
+.trust-strip div{padding:5px 12px;border-right:1px solid #ffffff55;font-size:16px}
+.trust-strip div:last-child{border-right:0}
+.trust-strip span{display:block;font-size:12px;opacity:.9;margin-top:4px}
 .stats{max-width:1200px;margin:22px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .stat{background:#fff;border-radius:12px;padding:15px;text-align:center;box-shadow:0 3px 12px #00000012}
 .stat b{display:block;font-size:24px;color:#102f6e}
@@ -92,6 +99,11 @@ display:flex;align-items:center;justify-content:center;text-align:center;color:#
  .gallery{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:700px){
+ .trust-strip{grid-template-columns:1fr 1fr}
+ .trust-strip div{border-right:0;border-bottom:1px solid #ffffff44}
+ .side-showcase{position:relative;right:auto;top:auto;bottom:auto;width:auto;display:grid;grid-template-columns:repeat(3,1fr);padding:10px}
+ .side-showcase div{min-height:70px}
+
  .topbar{font-size:12px}
  .nav-links{display:none}
  .mobile-menu{display:block;font-size:24px}
@@ -116,7 +128,7 @@ display:flex;align-items:center;justify-content:center;text-align:center;color:#
   "name":"Affan Aluminium Upvc Plywood and Hardware",
   "description":"UPVC doors and windows, aluminium doors and windows, sliding doors, railing, partition, modular kitchen, wardrobe, plywood and hardware work in Patna.",
   "telephone":"+91-9304110652",
-  "email":"affanaluminium@gmail.com",
+  "email":"contact.affanaluminium@gmail.com",
   "address":{
     "@type":"PostalAddress",
     "streetAddress":"Karbala More, AIIMS Road, Near HP Petrol Pump",
@@ -139,7 +151,7 @@ display:flex;align-items:center;justify-content:center;text-align:center;color:#
   </div>
   <div class="top-right">
     <a href="tel:9304110652">📞 9304110652</a>
-    <a href="mailto:affanaluminium@gmail.com">✉ affanaluminium@gmail.com</a>
+    <a href="mailto:contact.affanaluminium@gmail.com">✉ contact.affanaluminium@gmail.com</a>
   </div>
 </div>
 
@@ -165,7 +177,7 @@ display:flex;align-items:center;justify-content:center;text-align:center;color:#
 <main id="home">
 
 <section class="hero">
-  <div class="hero-grid">
+  <div class="hero-grid reference-layout">
     <div class="hero-copy">
       <div class="kicker">PREMIUM DOORS & WINDOWS • PATNA, BIHAR</div>
       <h1>Affan <span>Aluminium</span></h1>
@@ -182,7 +194,13 @@ display:flex;align-items:center;justify-content:center;text-align:center;color:#
         <a class="whatsapp-btn" href="https://wa.me/919304110652" target="_blank" rel="noopener">💬 WhatsApp</a>
       </div>
     </div>
-    <div class="hero-photo" aria-label="UPVC door and window showcase"></div>
+    <div class="hero-photo hero-reference" aria-label="UPVC door and window showcase">
+      <div class="side-showcase">
+        <div><b>UPVC WINDOWS</b></div>
+        <div><b>SLIDING DOORS</b></div>
+        <div><b>ALUMINIUM WORK</b></div>
+      </div>
+    </div>
   </div>
 
   <div class="stats">
@@ -191,6 +209,14 @@ display:flex;align-items:center;justify-content:center;text-align:center;color:#
     <div class="stat"><b>1000+</b>Happy Customers</div>
     <div class="stat"><b>100%</b>Quality Focus</div>
   </div>
+</section>
+
+<section class="trust-strip">
+  <div>🛡️ <b>Premium Quality</b><span>Materials</span></div>
+  <div>👷 <b>Expert Team</b><span>& Installation</span></div>
+  <div>🚚 <b>On-time</b><span>Delivery</span></div>
+  <div>₹ <b>Affordable</b><span>Price</span></div>
+  <div>⭐ <b>Customer</b><span>Satisfaction</span></div>
 </section>
 
 <section class="section" id="services">
@@ -279,7 +305,7 @@ display:flex;align-items:center;justify-content:center;text-align:center;color:#
       <h3>📍 Affan Aluminium Upvc Plywood and Hardware</h3>
       <p><b>Address:</b><br>Karbala More, AIIMS Road,<br>Near HP Petrol Pump,<br>Phulwari Sharif, Patna, Bihar – 801505</p>
       <p><b>📞 Phone:</b> <a href="tel:9304110652">9304110652</a></p>
-      <p><b>✉ Email:</b> <a href="mailto:affanaluminium@gmail.com">affanaluminium@gmail.com</a></p>
+      <p><b>✉ Email:</b> <a href="mailto:contact.affanaluminium@gmail.com">contact.affanaluminium@gmail.com</a></p>
       <a class="primary-btn" href="https://maps.app.goo.gl/V6u2JezB52cEEstd8?g_st=ac" target="_blank" rel="noopener">📍 Get Directions</a>
     </div>
     <div class="map-box">
